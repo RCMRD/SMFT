@@ -1,0 +1,36 @@
+.modal-dialog {
+    height: 100vh !important;
+    display: flex;
+}
+
+.modal-content {
+    margin: auto !important;
+    height: fit-content !important;
+}
+
+#myDiv1 {
+    display: flex;
+    justify-content: center;
+}
+
+#infoTbl {
+    align-self: center;
+}
+
+
+/* 80% of window height */
+
+
+/* .modal-dialog,
+.modal-content {
+    height: 80%;
+} */
+
+
+/* 100% = dialog height, 120px = header + footer */
+
+
+/* .modal-body {
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+} */
