@@ -185,8 +185,8 @@ var stations = L.geoJson(null, {
                 "<td>" + feature.properties.station_name + "</td>" +
                 "</tr>\
                 <tr>\
-                <th>Country</th>" +
-                "<td>" + feature.properties.station_country + "</td>" +
+                <th>Sub-Catchment Area</th>" +
+                "<td>" + "N/A" + "</td>" +
                 "</tr>\
                 <tr>\
                 <th>River</th>" +
@@ -195,6 +195,10 @@ var stations = L.geoJson(null, {
                 <tr>\
                 <th>Basin</th>" +
                 "<td>" + feature.properties.basin + "</td>" +
+                "</tr>\
+                <tr>\
+                <th>Country</th>" +
+                "<td>" + feature.properties.station_country + "</td>" +
                 "</tr>\
                 </tbody>\
                 </table>";
@@ -213,7 +217,8 @@ var stations = L.geoJson(null, {
                             feature.properties.station_name,
                             feature.properties.station_country,
                             feature.properties.river,
-                            feature.properties.basin
+                            feature.properties.basin,
+                            "N/A"
                         ]
                     );
 
@@ -570,8 +575,8 @@ function setModalSTATION(info_) {
         "<td>" + info[0] + "</td>" +
         "</tr>\
             <tr>\
-                <th>Country</th>" +
-        "<td>" + info[1] + "</td>" +
+                <th>Sub-Catchment Area (Km2)</th>" +
+        "<td>" + info[5] + "</td>" +
         "</tr>\
                 <tr>\
                 <th>River</th>" +
@@ -580,6 +585,10 @@ function setModalSTATION(info_) {
                 <tr>\
                 <th>Basin</th>" +
         "<td>" + info[3] + "</td>" +
+        "</tr>\
+        <tr>\
+                <th>Country</th>" +
+        "<td>" + info[1] + "</td>" +
         "</tr>\
             </tbody>\
             </table>";
@@ -775,47 +784,57 @@ function setModalFDCRES(data_fdc_res) {
         "<div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);width: 100%;'>\
         <table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
             <tbody>\
-            <tr class='table-dark'> <th colspan='2'> Study Sub-Catchment (cubic metres/day) </th> </tr>\
-            <tr>\
-            <th>Reserve</th>" +
+            <tr class='table-dark'> <th colspan='3'> Study Sub-Catchment Discharge</th> </tr>\
+        <tr>\
+            <th>Units</th>\
+            <th>cm<sup>3</sup>/sec</th>\
+            <th>Million m<sup>3</sup>/day</th>\
+        </tr>\
+        <tr>\
+            <th>Reserve / Environmental Flow</th>" +
         "<td>" + info["reserve_sub_cat"] + "</td>" +
+        "<td>" + info["reserve_sub_cat_2"] + "</td>" +
         "</tr>\
-            <tr>\
-                <th>Normal Flow (Domestic Use)</th>" +
-        "<td>" + info["normal_dom_sub_cat"] + "</td>" +
+        <tr>\
+            <th>Normal Flow</th>" +
+        "<td>" + info["normal_flow_sub_cat"] + "</td>" +
+        "<td>" + info["normal_flow_sub_cat_2"] + "</td>" +
         "</tr>\
-                <tr>\
-                <th>Flood Discharge (Allocation)</th>" +
-        "<td>" + info["flood_vol_sub_cat"] + "</td>" +
+        <tr>\
+            <th>Flood Flow</th>" +
+        "<td>" + info["flood_flow_sub_cat"] + "</td>" +
+        "<td>" + info["flood_flow_sub_cat_2"] + "</td>" +
         "</tr>\
-            </tbody>\
-            </table>" +
-
-        "<br>\
-        <table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
-            <tbody>\
-            <tr class='table-dark'> <th colspan='2'> Study Sub-Catchment (Volume - MCM/yr) </th> </tr>\
-            <tr>\
-            <th>Flood Volume (Irrigation/Hydropower)</th>" +
-        "<td>" + info["flood_disch_sub_cat"] + "</td>" +
+        <tr>\
+            <th>Flood Discharge (Allocation)</th>" +
+        "<td>" + info["flood_dis_sub_cat"] + "</td>" +
+        "<td>" + info["flood_dis_sub_cat_2"] + "</td>" +
         "</tr>\
         </tbody>\
-            </table>" +
+        </table>" +
 
         "<br>\
         <table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
             <tbody>\
-            <tr class='table-info'> <th colspan='2'> Study Sub-Catchment - Spring Flow Conditions (cubic metres/day) </th> </tr>\
-            <tr>\
-            <th>Reserve</th>" +
+            <tr class='table-info'> <th colspan='3'> Study Sub-Catchment - Spring Flow Conditions</th> </tr>\
+        <tr>\
+            <th>Units</th>\
+            <th>cm<sup>3</sup>/sec</th>\
+            <th>Million m<sup>3</sup>/day</th>\
+        </tr>\
+        <tr>\
+            <th>Reserve / Environmental Flow</th>" +
+        "<td>" + info["reserve_spring"] + "</td>" +
         "<td>" + info["reserve_spring"] + "</td>" +
         "</tr>\
-            <tr>\
-                <th>Normal Flow (Domestic Use)</th>" +
+        <tr>\
+            <th>Normal Flow (Domestic Use)</th>" +
+        "<td>" + info["normal_dom_spring"] + "</td>" +
         "<td>" + info["normal_dom_spring"] + "</td>" +
         "</tr>\
-                <tr>\
-                <th>Flood Discharge (Commercial Allocation)</th>" +
+        <tr>\
+            <th>Flood Discharge (Commercial Allocation)</th>" +
+        "<td>" + info["flow_comm_spring"] + "</td>" +
         "<td>" + info["flow_comm_spring"] + "</td>" +
         "</tr>\
             </tbody>\

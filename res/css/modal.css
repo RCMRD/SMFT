@@ -17,6 +17,18 @@
     align-self: center;
 }
 
+.tab-pane.active {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.tab_div {
+    width: 700px !important;
+    height: 500px !important;
+    position: relative !important;
+}
+
 
 /* 80% of window height */
 
