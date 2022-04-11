@@ -787,7 +787,7 @@ function setModalFDCRES(data_fdc_res) {
             <tr class='table-dark'> <th colspan='3'> Study Sub-Catchment Discharge</th> </tr>\
         <tr>\
             <th>Units</th>\
-            <th>cm<sup>3</sup>/sec</th>\
+            <th>m<sup>3</sup>/sec</th>\
             <th>Million m<sup>3</sup>/day</th>\
         </tr>\
         <tr>\
@@ -819,7 +819,7 @@ function setModalFDCRES(data_fdc_res) {
             <tr class='table-info'> <th colspan='3'> Study Sub-Catchment - Spring Flow Conditions</th> </tr>\
         <tr>\
             <th>Units</th>\
-            <th>cm<sup>3</sup>/sec</th>\
+            <th>m<sup>3</sup>/sec</th>\
             <th>Million m<sup>3</sup>/day</th>\
         </tr>\
         <tr>\
