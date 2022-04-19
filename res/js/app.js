@@ -1,9 +1,15 @@
 var points_url = "res/data/stations.geojson";
+var rivers_url = "res/data/rivers.geojson";
+var rufiji_url = "res/data/rufiji_river_basin.geojson";
+var wami_url = "res/data/wami_river_basin.geojson";
+var ruvu_url = "res/data/ruvu_river_basin.geojson";
+var tz_url = "res/data/tanzania.geojson";
+var ip_address = "http://127.0.0.1:5000/";
 var raster_url = "";
-var data_all_url = "http://127.0.0.1:5000/stations";
-var data_single_vic_url = "http://127.0.0.1:5000/stationvic/";
-var data_single_fdc_url = "http://127.0.0.1:5000/stationfdc/";
-var data_single_fdc_res_url = "http://127.0.0.1:5000/stationfdcresource/";
+var data_all_url = ip_address + "stations";
+var data_single_vic_url = ip_address + "stationvic/";
+var data_single_fdc_url = ip_address + "stationfdc/";
+var data_single_fdc_res_url = ip_address + "stationfdcresource/";
 
 var map, featureList, stationSearch = [];
 
@@ -243,19 +249,249 @@ $.getJSON(points_url, function(data) {
     map.addLayer(stationLayer);
 });
 
+//////////////////////////////////////////////////////////////////////
+
+var rufijiLayer = L.geoJson(null);
+var wamiLayer = L.geoJson(null);
+var ruvuLayer = L.geoJson(null);
+var riverLayer = L.geoJson(null);
+
+function style_River() {
+    return {
+        opacity: 1,
+        color: 'rgba(74,150,255,1.0)',
+        dashArray: '',
+        lineCap: 'square',
+        lineJoin: 'bevel',
+        weight: 1.0,
+        fillOpacity: 0,
+        interactive: true,
+        clickable: true
+    }
+}
+
+function style_River_Basin() {
+    return {
+        opacity: 1,
+        color: 'rgba(76,175,80,1.0)',
+        dashArray: '',
+        lineCap: 'square',
+        lineJoin: 'bevel',
+        weight: 2.5,
+        fillOpacity: 0,
+        interactive: true,
+        clickable: true
+    }
+}
+
+function style_Tanzania() {
+    return {
+        opacity: 1,
+        color: 'rgba(0,0,0,1.0)',
+        dashArray: '',
+        lineCap: 'square',
+        lineJoin: 'bevel',
+        weight: 2.0,
+        fillOpacity: 0,
+        clickable: false,
+        fill: false,
+    }
+}
+
+var riverWays = L.geoJson(null, {
+    style: style_River,
+    onEachFeature: function(feature, layer) {
+        if (feature.properties) {
+            var content = "<table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
+                            <tbody>\
+                            <tr>\
+                            <th>Type</th>" +
+                "<td>" + feature.properties.F_CODE_DES + "</td>" +
+                "</tr>\
+                            <tr>\
+                            <th>Seasonality</th>" +
+                "<td>" + feature.properties.HYC_DESCRI + "</td>" +
+                "</tr>\
+                            <tr>\
+                            <th>Basin</th>" +
+                "<td>" + feature.properties.NAM + "</td>" +
+                "</tr>\
+                            </tbody>" +
+                "</table>";
+            layer.bindPopup(content);
+        }
+    }
+});
+$.getJSON(rivers_url, function(data) {
+    riverWays.addData(data);
+    map.removeLayer(riverLayer);
+});
+
+var rufijiBasin = L.geoJson(null, {
+    style: style_River_Basin,
+    onEachFeature: function(feature, layer) {
+        if (feature.properties) {
+            var content = "<table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
+                            <tbody>\
+                            <tr>\
+                            <th>Basin</th>" +
+                "<td>" + "Rufiji" + "</td>" +
+                "</tr>\
+                            </tbody>" +
+                "</table>";
+            layer.bindPopup(content);
+        }
+    }
+});
+$.getJSON(rufiji_url, function(data) {
+    rufijiBasin.addData(data);
+    map.removeLayer(rufijiLayer);
+});
+
+var ruvuBasin = L.geoJson(null, {
+    style: style_River_Basin,
+    onEachFeature: function(feature, layer) {
+        if (feature.properties) {
+            var content = "<table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
+                            <tbody>\
+                            <tr>\
+                            <th>Basin</th>" +
+                "<td>" + "Ruvu" + "</td>" +
+                "</tr>\
+                            </tbody>" +
+                "</table>";
+            layer.bindPopup(content);
+        }
+    }
+});
+$.getJSON(ruvu_url, function(data) {
+    ruvuBasin.addData(data);
+    map.removeLayer(ruvuLayer);
+});
+
+var wamiBasin = L.geoJson(null, {
+    style: style_River_Basin,
+    onEachFeature: function(feature, layer) {
+        if (feature.properties) {
+            var content = "<table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
+                            <tbody>\
+                            <tr>\
+                            <th>Basin</th>" +
+                "<td>" + "Wami" + "</td>" +
+                "</tr>\
+                            </tbody>" +
+                "</table>";
+            layer.bindPopup(content);
+        }
+    }
+});
+$.getJSON(wami_url, function(data) {
+    wamiBasin.addData(data);
+    map.removeLayer(wamiLayer);
+});
+
+var roi_tzLayer = L.geoJson(null);
+var roi_tz = L.geoJson(null, {
+    style: style_Tanzania,
+    onEachFeature: function(feature, layer) {
+
+    }
+});
+$.getJSON(tz_url, function(data) {
+    roi_tz.addData(data);
+});
+
+
+//////////////////////////////////////////////////////////////////////
+
 map = L.map("map", {
     zoom: 6.6,
     center: [0, 39.2627871],
-    layers: [cartoLight, markerClusters, highlight], //[osm, cartoLight, usgsImagery, markerClusters, highlight]
+    layers: [cartoLight, roi_tzLayer, markerClusters, highlight], //[osm, cartoLight, usgsImagery, markerClusters, highlight]
     zoomControl: false,
     attributionControl: false
 });
+
+map.addLayer(roi_tzLayer);
+map.addLayer(roi_tz);
+
+function addThematicLayers(e) {
+
+    if (e.layer === rufijiLayer) {
+        map.addLayer(rufijiBasin);
+    }
+
+    if (e.layer === wamiLayer) {
+        map.addLayer(wamiBasin);
+    }
+
+    if (e.layer === ruvuLayer) {
+        map.addLayer(ruvuBasin);
+    }
+
+    if (e.layer === riverLayer) {
+        map.addLayer(riverWays);
+    }
+
+}
+
+function removeThematicLayers(e) {
+
+    if (e.layer === rufijiLayer) {
+        map.removeLayer(rufijiBasin);
+    }
+
+    if (e.layer === wamiLayer) {
+        map.removeLayer(wamiBasin);
+    }
+
+    if (e.layer === ruvuLayer) {
+        map.removeLayer(ruvuBasin);
+    }
+
+    if (e.layer === riverLayer) {
+        map.removeLayer(riverWays);
+    }
+
+    clearHighlight();
+
+}
 
 /* Layer control listeners that allow for a single markerClusters layer */
 map.on("overlayadd", function(e) {
     if (e.layer === stationLayer) {
         markerClusters.addLayer(stations);
         syncSidebar();
+    }
+
+    var isThematic =
+        (e.layer === rufijiLayer) ? true :
+        (e.layer === wamiLayer) ? true :
+        (e.layer === ruvuLayer) ? true :
+        (e.layer === riverLayer) ? true :
+        false;
+
+
+    if (
+        e.layer === rufijiLayer ||
+        e.layer === wamiLayer ||
+        e.layer === riverLayer ||
+        e.layer === ruvuLayer
+    )
+
+    {
+        addThematicLayers(e);
+
+    } else if (
+        e.layer !== rufijiLayer &&
+        e.layer !== wamiLayer &&
+        e.layer !== riverLayer &&
+        e.layer !== ruvuLayer
+    )
+
+    {
+        removeThematicLayers(e);
+
     }
 });
 
@@ -264,6 +500,7 @@ map.on("overlayremove", function(e) {
         markerClusters.removeLayer(stations);
         syncSidebar();
     }
+    removeThematicLayers(e);
 });
 
 /* Filter sidebar feature list to only show features in current map bounds */
@@ -350,7 +587,16 @@ var baseLayers = {
 
 var groupedOverlays = {
     "Stations": {
-        "<img src='res/img/station.png' width='24' height='28'>&nbsp;River Gauge Stations": stationLayer
+        "<img src='res/img/station.png' width='24' height='28'>&nbsp;River Gauge Stations": stationLayer,
+        "<img src='res/img/river.png' width='24' height='28'>&nbsp;Rivers": riverLayer
+    },
+    "Basins": {
+        "Rufiji Basin": rufijiLayer,
+        "Wami Basin": wamiLayer,
+        "Ruvu Basin": ruvuLayer
+    },
+    "Country": {
+        "Tanzania": roi_tzLayer
     }
 };
 
@@ -643,7 +889,6 @@ function setModalVIC(data_vic) {
         type: "scatter",
         mode: "lines",
         line: { color: '#7F7F7F' },
-
         x: [],
         y: []
     };
@@ -746,16 +991,15 @@ function setModalVIC(data_vic) {
         var mm = String(today.getMonth() + 1).padStart(2, '0');
         var yyyy = today.getFullYear();
 
-        var csv_name = info[0] + '_' + mm + '_' + dd + '_' + yyyy + '.csv';
+        var csv_name = data_vic[0]["_station_name"] + '_' + mm + '_' + dd + '_' + yyyy + '.csv';
 
         let csvContent = "data:text/csv;charset=utf-8,";
 
-        data_.forEach(function(rowObj) {
+        data_vic.forEach(function(rowObj) {
 
             let rowlist = [
                 rowObj["_station_name"],
                 rowObj["_data_date"],
-                rowObj["_data_value_sim"],
                 rowObj["_data_value_obs"],
                 rowObj["_station_country"]
             ];

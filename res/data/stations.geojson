@@ -1,1 +1,732 @@
-{ "type": "FeatureCollection", "features": [{ "type": "Feature", "properties": { "basin": "Wami", "river": "Wami", "station_country": "Tanzania", "station_name": "1G1" }, "geometry": { "type": "Point", "coordinates": [37.53684, -6.462606] } }, { "type": "Feature", "properties": { "basin": "Wami", "river": "Wami", "station_country": "Tanzania", "station_name": "1G2" }, "geometry": { "type": "Point", "coordinates": [38.388457, -6.211145] } }, { "type": "Feature", "properties": { "basin": "Wami", "river": "Mkata", "station_country": "Tanzania", "station_name": "1GD36" }, "geometry": { "type": "Point", "coordinates": [37.377538, -6.753387] } }, { "type": "Feature", "properties": { "basin": "Ruvu", "river": "Ruvu", "station_country": "Tanzania", "station_name": "1H3" }, "geometry": { "type": "Point", "coordinates": [38.278886, -7.275577] } }, { "type": "Feature", "properties": { "basin": "Ruvu", "river": "Ruvu", "station_country": "Tanzania", "station_name": "1H5" }, "geometry": { "type": "Point", "coordinates": [37.916944, -7.029722] } }, { "type": "Feature", "properties": { "basin": "Ruvu", "river": "Ruvu", "station_country": "Tanzania", "station_name": "1H8" }, "geometry": { "type": "Point", "coordinates": [38.725465, -6.723395] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Mbarali", "station_country": "Tanzania", "station_name": "1KA11" }, "geometry": { "type": "Point", "coordinates": [34.37712, -8.78411] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Mbarali", "station_country": "Tanzania", "station_name": "1KA11A" }, "geometry": { "type": "Point", "coordinates": [34.37, -8.78] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Halali", "station_country": "Tanzania", "station_name": "1KA12" }, "geometry": { "type": "Point", "coordinates": [34.621344, -8.775021] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Ndembera", "station_country": "Tanzania", "station_name": "1KA15" }, "geometry": { "type": "Point", "coordinates": [35.176598, -8.267239] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Ndembera", "station_country": "Tanzania", "station_name": "1KA15A" }, "geometry": { "type": "Point", "coordinates": [35.177788, -8.276162] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Liosi", "station_country": "Tanzania", "station_name": "1KA16" }, "geometry": { "type": "Point", "coordinates": [33.85017, -8.86979] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lunwa", "station_country": "Tanzania", "station_name": "1KA16A" }, "geometry": { "type": "Point", "coordinates": [33.8365, -8.8707] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt. Ruaha", "station_country": "Tanzania", "station_name": "1KA2" }, "geometry": { "type": "Point", "coordinates": [35.7167, -7.7833] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt.Ruaha", "station_country": "Tanzania", "station_name": "1KA21" }, "geometry": { "type": "Point", "coordinates": [35.7925, -7.920833] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt.Ruaha", "station_country": "Tanzania", "station_name": "1KA21A" }, "geometry": { "type": "Point", "coordinates": [35.793056, -7.9175] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Mtitu", "station_country": "Tanzania", "station_name": "1KA22" }, "geometry": { "type": "Point", "coordinates": [35.762222, -7.988889] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Hukuni", "station_country": "Tanzania", "station_name": "1KA23" }, "geometry": { "type": "Point", "coordinates": [34.55929, -8.85732] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Hukuni", "station_country": "Tanzania", "station_name": "1KA23A" }, "geometry": { "type": "Point", "coordinates": [34.5583, -8.8583] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Gt. Ruaha", "station_country": "Tanzania", "station_name": "1KA27" }, "geometry": { "type": "Point", "coordinates": [34.558611, -7.935] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt. Ruaha", "station_country": "Tanzania", "station_name": "1KA2A" }, "geometry": { "type": "Point", "coordinates": [35.72, -7.78] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Gt. Ruaha", "station_country": "Tanzania", "station_name": "1KA3" }, "geometry": { "type": "Point", "coordinates": [36.97923, -7.66298] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt. Ruaha", "station_country": "Tanzania", "station_name": "1KA31" }, "geometry": { "type": "Point", "coordinates": [35.471687, -7.482685] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt. Ruaha", "station_country": "Tanzania", "station_name": "1KA32" }, "geometry": { "type": "Point", "coordinates": [35.3443, -8.3521] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt. Ruaha", "station_country": "Tanzania", "station_name": "1KA32A" }, "geometry": { "type": "Point", "coordinates": [35.3443, -8.3521] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Ndembera", "station_country": "Tanzania", "station_name": "1KA33" }, "geometry": { "type": "Point", "coordinates": [34.823611, -8.190278] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Ndembera", "station_country": "Tanzania", "station_name": "1KA33A" }, "geometry": { "type": "Point", "coordinates": [34.823611, -8.190278] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Ndembera", "station_country": "Tanzania", "station_name": "1KA33B" }, "geometry": { "type": "Point", "coordinates": [34.823611, -8.190278] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lukosi", "station_country": "Tanzania", "station_name": "1KA37" }, "geometry": { "type": "Point", "coordinates": [36.460833, -7.536111] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lukosi", "station_country": "Tanzania", "station_name": "1KA37A" }, "geometry": { "type": "Point", "coordinates": [36.460833, -7.536111] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Yovi", "station_country": "Tanzania", "station_name": "1KA38" }, "geometry": { "type": "Point", "coordinates": [36.793056, -7.589635] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Yovi", "station_country": "Tanzania", "station_name": "1KA38A" }, "geometry": { "type": "Point", "coordinates": [36.793056, -7.589635] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt. Ruaha", "station_country": "Tanzania", "station_name": "1KA39" }, "geometry": { "type": "Point", "coordinates": [35.675808, -8.064983] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Lt. Ruaha", "station_country": "Tanzania", "station_name": "1KA39A" }, "geometry": { "type": "Point", "coordinates": [35.673056, -8.063611] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Gt. Ruaha", "station_country": "Tanzania", "station_name": "1KA3A" }, "geometry": { "type": "Point", "coordinates": [36.9757, -7.6635] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Kisigo", "station_country": "Tanzania", "station_name": "1KA41" }, "geometry": { "type": "Point", "coordinates": [35.1342, -6.8502] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Kisigo", "station_country": "Tanzania", "station_name": "1KA42" }, "geometry": { "type": "Point", "coordinates": [35.4142, -6.9293] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Gt. Ruaha", "station_country": "Tanzania", "station_name": "1KA5" }, "geometry": { "type": "Point", "coordinates": [36.0833, -7.1272] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Chabi", "station_country": "Tanzania", "station_name": "1KA58" }, "geometry": { "type": "Point", "coordinates": [36.5201, -7.3328] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Chabi", "station_country": "Tanzania", "station_name": "1KA58A" }, "geometry": { "type": "Point", "coordinates": [36.5201, -7.3328] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Gt. Ruaha", "station_country": "Tanzania", "station_name": "1KA59" }, "geometry": { "type": "Point", "coordinates": [34.916737, -7.732621] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Great Rua", "station_country": "Tanzania", "station_name": "1KA5A" }, "geometry": { "type": "Point", "coordinates": [36.08, -7.13] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Gt. Ruaha", "station_country": "Tanzania", "station_name": "1KA61" }, "geometry": { "type": "Point", "coordinates": [36.730833, -7.571944] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Bubu", "station_country": "Tanzania", "station_name": "1KA62" }, "geometry": { "type": "Point", "coordinates": [35.813333, -6.778333] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Nyabu", "station_country": "Tanzania", "station_name": "1KA63" }, "geometry": { "type": "Point", "coordinates": [35.9072, -6.8659] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Fufu", "station_country": "Tanzania", "station_name": "1KA64" }, "geometry": { "type": "Point", "coordinates": [35.9469, -6.7507] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Meta", "station_country": "Tanzania", "station_name": "1KA65" }, "geometry": { "type": "Point", "coordinates": [33.927959, -8.82119] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Mlowo", "station_country": "Tanzania", "station_name": "1KA66" }, "geometry": { "type": "Point", "coordinates": [33.673231, -8.760482] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Great Rua", "station_country": "Tanzania", "station_name": "1KA71A" }, "geometry": { "type": "Point", "coordinates": [34.323449, -8.414065] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Kimani", "station_country": "Tanzania", "station_name": "1KA9" }, "geometry": { "type": "Point", "coordinates": [34.17508, -8.84927] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "1KAMTR" }, "geometry": { "type": "Point", "coordinates": [35.9482, -7.1116] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "1KB3" }, "geometry": { "type": "Point", "coordinates": [38.007558, -7.774619] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "1KB8" }, "geometry": { "type": "Point", "coordinates": [36.721185, -8.180247] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "1KB9" }, "geometry": { "type": "Point", "coordinates": [35.628596, -9.035961] } }, { "type": "Feature", "properties": { "basin": "Wami", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS101" }, "geometry": { "type": "Point", "coordinates": [36.27636, -6.05044] } }, { "type": "Feature", "properties": { "basin": "Wami", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS102" }, "geometry": { "type": "Point", "coordinates": [36.77208, -6.68101] } }, { "type": "Feature", "properties": { "basin": "Wami", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS103" }, "geometry": { "type": "Point", "coordinates": [37.64058, -6.272529] } }, { "type": "Feature", "properties": { "basin": "Ruvu", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS104" }, "geometry": { "type": "Point", "coordinates": [38.09137, -7.33855] } }, { "type": "Feature", "properties": { "basin": "Ruvu", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS105" }, "geometry": { "type": "Point", "coordinates": [38.31487, -6.98932] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS106" }, "geometry": { "type": "Point", "coordinates": [36.81086, -9.42926] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS107" }, "geometry": { "type": "Point", "coordinates": [37.28582, -9.031145] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS108" }, "geometry": { "type": "Point", "coordinates": [37.12517, -9.61552] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS109" }, "geometry": { "type": "Point", "coordinates": [37.75609, -8.01618] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS110" }, "geometry": { "type": "Point", "coordinates": [34.97054, -6.62022] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS111" }, "geometry": { "type": "Point", "coordinates": [36.41091, -7.32455] } }, { "type": "Feature", "properties": { "basin": "Rufiji", "river": "Unknown", "station_country": "Tanzania", "station_name": "ABS112" }, "geometry": { "type": "Point", "coordinates": [37.55939, -7.88927] } }] }
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.53684, -6.462606]
+            },
+            "properties": {
+                "basin": "Wami",
+                "river": "Wami",
+                "station_name": "1G1",
+                "area_km2": 5117,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.388457, -6.211145]
+            },
+            "properties": {
+                "basin": "Wami",
+                "river": "Wami",
+                "station_name": "1G2",
+                "area_km2": 40165,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.377538, -6.753387]
+            },
+            "properties": {
+                "basin": "Wami",
+                "river": "Mkata",
+                "station_name": "1GD36",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.278886, -7.275577]
+            },
+            "properties": {
+                "basin": "Ruvu",
+                "river": "Ruvu",
+                "station_name": "1H3",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.916944, -7.029722]
+            },
+            "properties": {
+                "basin": "Ruvu",
+                "river": "Ruvu",
+                "station_name": "1H5",
+                "area_km2": 420,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.725465, -6.723395]
+            },
+            "properties": {
+                "basin": "Ruvu",
+                "river": "Ruvu",
+                "station_name": "1H8",
+                "area_km2": 14449,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.37712, -8.78411]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Mbarali",
+                "station_name": "1KA11",
+                "area_km2": 1553,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.621344, -8.775021]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Halali",
+                "station_name": "1KA12",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.176598, -8.267239]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Ndembera",
+                "station_name": "1KA15",
+                "area_km2": 1105,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.85017, -8.86979]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Liosi",
+                "station_name": "1KA16",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.7167, -7.7833]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Lt. Ruaha",
+                "station_name": "1KA2",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.7925, -7.920833]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Lt.Ruaha",
+                "station_name": "1KA21",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.762222, -7.988889]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Mtitu",
+                "station_name": "1KA22",
+                "area_km2": 464,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.55929, -8.85732]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Hukuni",
+                "station_name": "1KA23",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.558611, -7.935]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Gt. Ruaha",
+                "station_name": "1KA27",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.97923, -7.66298]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Gt. Ruaha",
+                "station_name": "1KA3",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.471687, -7.482685]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Lt. Ruaha",
+                "station_name": "1KA31",
+                "area_km2": 5209,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.3443, -8.3521]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Lt. Ruaha",
+                "station_name": "1KA32",
+                "area_km2": 3782,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.823611, -8.190278]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Ndembera",
+                "station_name": "1KA33",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.460833, -7.536111]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Lukosi",
+                "station_name": "1KA37",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.793056, -7.589635]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Yovi",
+                "station_name": "1KA38",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.675808, -8.064983]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Lt. Ruaha",
+                "station_name": "1KA39",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.9757, -7.6635]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Gt. Ruaha",
+                "station_name": "1KA3A",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.1342, -6.8502]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Kisigo",
+                "station_name": "1KA41",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.4142, -6.9293]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Kisigo",
+                "station_name": "1KA42",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.0833, -7.1272]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Gt. Ruaha",
+                "station_name": "1KA5",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.5201, -7.3328]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Chabi",
+                "station_name": "1KA58",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.916737, -7.732621]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Gt. Ruaha",
+                "station_name": "1KA59",
+                "area_km2": 23527,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.08, -7.13]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Great Rua",
+                "station_name": "1KA5A",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.730833, -7.571944]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Gt. Ruaha",
+                "station_name": "1KA61",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.813333, -6.778333]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Bubu",
+                "station_name": "1KA62",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.9072, -6.8659]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Nyabu",
+                "station_name": "1KA63",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.9469, -6.7507]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Fufu",
+                "station_name": "1KA64",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.927959, -8.82119]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Meta",
+                "station_name": "1KA65",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.673231, -8.760482]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Mlowo",
+                "station_name": "1KA66",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.17508, -8.84927]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "Kimani",
+                "station_name": "1KA9",
+                "area_km2": 451,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.9482, -7.1116]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "",
+                "station_name": "1KAMTR",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.007558, -7.774619]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": " ",
+                "station_name": "1KB3",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.721185, -8.180247]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": " ",
+                "station_name": "1KB8",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.628596, -9.035961]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": " ",
+                "station_name": "1KB9",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.27636, -6.05044]
+            },
+            "properties": {
+                "basin": "Wami",
+                "river": "",
+                "station_name": "ABS101",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.77208, -6.68101]
+            },
+            "properties": {
+                "basin": "Wami",
+                "river": "",
+                "station_name": "ABS102",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.64058, -6.272529]
+            },
+            "properties": {
+                "basin": "Wami",
+                "river": "",
+                "station_name": "ABS103",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.09137, -7.33855]
+            },
+            "properties": {
+                "basin": "Ruvu",
+                "river": "",
+                "station_name": "ABS104",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.31487, -6.98932]
+            },
+            "properties": {
+                "basin": "Ruvu",
+                "river": "",
+                "station_name": "ABS105",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.81086, -9.42926]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "",
+                "station_name": "ABS106",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.28582, -9.031145]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "",
+                "station_name": "ABS107",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.12517, -9.61552]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "",
+                "station_name": "ABS108",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.75609, -8.01618]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "",
+                "station_name": "ABS109",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.97054, -6.62022]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "",
+                "station_name": "ABS110",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.41091, -7.32455]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "",
+                "station_name": "ABS111",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.55939, -7.88927]
+            },
+            "properties": {
+                "basin": "Rufiji",
+                "river": "",
+                "station_name": "ABS112",
+                "area_km2": null,
+                "station_country": "Tanzania"
+            }
+        }
+    ]
+}
