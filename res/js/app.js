@@ -1,9 +1,4 @@
 var points_url = "res/data/stations.geojson";
-var rivers_url = "res/data/rivers.geojson";
-var rufiji_url = "res/data/rufiji_river_basin.geojson";
-var wami_url = "res/data/wami_river_basin.geojson";
-var ruvu_url = "res/data/ruvu_river_basin.geojson";
-var tz_url = "res/data/tanzania.geojson";
 var ip_address = "http://127.0.0.1:5000/";
 var raster_url = "";
 var data_all_url = ip_address + "stations";
