@@ -314,6 +314,9 @@ map = L.map("map", {
 
 map.addLayer(roi_tzLayer);
 map.addLayer(roi_tz);
+map.addLayer(riverLayer);
+map.addLayer(riverWays);
+
 
 function addThematicLayers(e) {
 
