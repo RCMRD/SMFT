@@ -255,152 +255,52 @@ var rufijiLayer = L.geoJson(null);
 var wamiLayer = L.geoJson(null);
 var ruvuLayer = L.geoJson(null);
 var riverLayer = L.geoJson(null);
-
-function style_River() {
-    return {
-        opacity: 1,
-        color: 'rgba(74,150,255,1.0)',
-        dashArray: '',
-        lineCap: 'square',
-        lineJoin: 'bevel',
-        weight: 1.0,
-        fillOpacity: 0,
-        interactive: true,
-        clickable: true
-    }
-}
-
-function style_River_Basin() {
-    return {
-        opacity: 1,
-        color: 'rgba(76,175,80,1.0)',
-        dashArray: '',
-        lineCap: 'square',
-        lineJoin: 'bevel',
-        weight: 2.5,
-        fillOpacity: 0,
-        interactive: true,
-        clickable: true
-    }
-}
-
-function style_Tanzania() {
-    return {
-        opacity: 1,
-        color: 'rgba(0,0,0,1.0)',
-        dashArray: '',
-        lineCap: 'square',
-        lineJoin: 'bevel',
-        weight: 2.0,
-        fillOpacity: 0,
-        clickable: false,
-        fill: false,
-    }
-}
-
-var riverWays = L.geoJson(null, {
-    style: style_River,
-    onEachFeature: function(feature, layer) {
-        if (feature.properties) {
-            var content = "<table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
-                            <tbody>\
-                            <tr>\
-                            <th>Type</th>" +
-                "<td>" + feature.properties.F_CODE_DES + "</td>" +
-                "</tr>\
-                            <tr>\
-                            <th>Seasonality</th>" +
-                "<td>" + feature.properties.HYC_DESCRI + "</td>" +
-                "</tr>\
-                            <tr>\
-                            <th>Basin</th>" +
-                "<td>" + feature.properties.NAM + "</td>" +
-                "</tr>\
-                            </tbody>" +
-                "</table>";
-            layer.bindPopup(content);
-        }
-    }
-});
-$.getJSON(rivers_url, function(data) {
-    riverWays.addData(data);
-    map.removeLayer(riverLayer);
-});
-
-var rufijiBasin = L.geoJson(null, {
-    style: style_River_Basin,
-    onEachFeature: function(feature, layer) {
-        if (feature.properties) {
-            var content = "<table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
-                            <tbody>\
-                            <tr>\
-                            <th>Basin</th>" +
-                "<td>" + "Rufiji" + "</td>" +
-                "</tr>\
-                            </tbody>" +
-                "</table>";
-            layer.bindPopup(content);
-        }
-    }
-});
-$.getJSON(rufiji_url, function(data) {
-    rufijiBasin.addData(data);
-    map.removeLayer(rufijiLayer);
-});
-
-var ruvuBasin = L.geoJson(null, {
-    style: style_River_Basin,
-    onEachFeature: function(feature, layer) {
-        if (feature.properties) {
-            var content = "<table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
-                            <tbody>\
-                            <tr>\
-                            <th>Basin</th>" +
-                "<td>" + "Ruvu" + "</td>" +
-                "</tr>\
-                            </tbody>" +
-                "</table>";
-            layer.bindPopup(content);
-        }
-    }
-});
-$.getJSON(ruvu_url, function(data) {
-    ruvuBasin.addData(data);
-    map.removeLayer(ruvuLayer);
-});
-
-var wamiBasin = L.geoJson(null, {
-    style: style_River_Basin,
-    onEachFeature: function(feature, layer) {
-        if (feature.properties) {
-            var content = "<table id='infoTbl' class='table table-striped table-dark table-bordered' style='table-layout: fixed;width: 100%;'>\
-                            <tbody>\
-                            <tr>\
-                            <th>Basin</th>" +
-                "<td>" + "Wami" + "</td>" +
-                "</tr>\
-                            </tbody>" +
-                "</table>";
-            layer.bindPopup(content);
-        }
-    }
-});
-$.getJSON(wami_url, function(data) {
-    wamiBasin.addData(data);
-    map.removeLayer(wamiLayer);
-});
-
 var roi_tzLayer = L.geoJson(null);
-var roi_tz = L.geoJson(null, {
-    style: style_Tanzania,
-    onEachFeature: function(feature, layer) {
 
-    }
-});
-$.getJSON(tz_url, function(data) {
-    roi_tz.addData(data);
+var roi_tz = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+    layers: 'smft:tza_admbnda_adm0_20181019',
+    format: 'image/png',
+    transparent: true,
+    version: '1.1.1',
+    attribution: "Tanzania Administrative Unit",
+    styles: 'countries_style',
 });
 
+var riverWays = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+    layers: 'smft:Rivers_Tanzania',
+    format: 'image/png',
+    transparent: true,
+    version: '1.1.1',
+    attribution: "Tanzania Rivers",
+    styles: 'rivers_style',
+});
+
+var rufijiBasin = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+    layers: 'smft:Rufiji_River_Basin_Tanzania',
+    format: 'image/png',
+    transparent: true,
+    version: '1.1.1',
+    attribution: "Rufiji Basin",
+    styles: 'basin_style',
+});
+
+var wamiBasin = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+    layers: 'smft:Wami_River_Basin_Tanzania',
+    format: 'image/png',
+    transparent: true,
+    version: '1.1.1',
+    attribution: "Wami Basin",
+    styles: 'basin_style',
+});
+
+var ruvuBasin = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+    layers: 'smft:Ruvu_River_Basin_Tanzania',
+    format: 'image/png',
+    transparent: true,
+    version: '1.1.1',
+    attribution: "Ruvu Basin",
+    styles: 'basin_style',
+});
 
 //////////////////////////////////////////////////////////////////////
 
