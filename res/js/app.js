@@ -187,7 +187,7 @@ var stations = L.geoJson(null, {
                 "</tr>\
                 <tr>\
                 <th>Sub-Catchment Area</th>" +
-                "<td>" + "N/A" + "</td>" +
+                "<td>" + feature.properties.area_km2 + "</td>" +
                 "</tr>\
                 <tr>\
                 <th>River</th>" +
@@ -219,7 +219,7 @@ var stations = L.geoJson(null, {
                             feature.properties.station_country,
                             feature.properties.river,
                             feature.properties.basin,
-                            "N/A"
+                            feature.properties.area_km2
                         ]
                     );
 
