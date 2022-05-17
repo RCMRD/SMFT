@@ -1,10 +1,14 @@
 {
     "type": "FeatureCollection",
-    "features": [{
+    "features": [
+        {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.53684, -6.462606]
+                "coordinates": [
+                    37.53684,
+                    -6.462606
+                ]
             },
             "properties": {
                 "basin": "Wami",
@@ -18,7 +22,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [38.388457, -6.211145]
+                "coordinates": [
+                    38.388457,
+                    -6.211145
+                ]
             },
             "properties": {
                 "basin": "Wami",
@@ -32,7 +39,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.377538, -6.753387]
+                "coordinates": [
+                    37.377538,
+                    -6.753387
+                ]
             },
             "properties": {
                 "basin": "Wami",
@@ -46,7 +56,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [38.278886, -7.275577]
+                "coordinates": [
+                    38.278886,
+                    -7.275577
+                ]
             },
             "properties": {
                 "basin": "Ruvu",
@@ -60,7 +73,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.916944, -7.029722]
+                "coordinates": [
+                    37.916944,
+                    -7.029722
+                ]
             },
             "properties": {
                 "basin": "Ruvu",
@@ -74,7 +90,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [38.725465, -6.723395]
+                "coordinates": [
+                    38.725465,
+                    -6.723395
+                ]
             },
             "properties": {
                 "basin": "Ruvu",
@@ -88,7 +107,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [34.37712, -8.78411]
+                "coordinates": [
+                    34.37712,
+                    -8.78411
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -102,7 +124,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [34.621344, -8.775021]
+                "coordinates": [
+                    34.621344,
+                    -8.775021
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -116,7 +141,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.176598, -8.267239]
+                "coordinates": [
+                    35.176598,
+                    -8.267239
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -130,7 +158,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [33.85017, -8.86979]
+                "coordinates": [
+                    33.85017,
+                    -8.86979
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -144,7 +175,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.7167, -7.7833]
+                "coordinates": [
+                    35.7167,
+                    -7.7833
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -158,7 +192,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.7925, -7.920833]
+                "coordinates": [
+                    35.7925,
+                    -7.920833
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -172,7 +209,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.762222, -7.988889]
+                "coordinates": [
+                    35.762222,
+                    -7.988889
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -186,7 +226,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [34.55929, -8.85732]
+                "coordinates": [
+                    34.55929,
+                    -8.85732
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -200,7 +243,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [34.558611, -7.935]
+                "coordinates": [
+                    34.558611,
+                    -7.935
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -214,7 +260,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.97923, -7.66298]
+                "coordinates": [
+                    36.97923,
+                    -7.66298
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -228,7 +277,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.471687, -7.482685]
+                "coordinates": [
+                    35.471687,
+                    -7.482685
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -242,7 +294,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.3443, -8.3521]
+                "coordinates": [
+                    35.3443,
+                    -8.3521
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -256,7 +311,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [34.823611, -8.190278]
+                "coordinates": [
+                    34.823611,
+                    -8.190278
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -270,7 +328,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.460833, -7.536111]
+                "coordinates": [
+                    36.460833,
+                    -7.536111
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -284,7 +345,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.793056, -7.589635]
+                "coordinates": [
+                    36.793056,
+                    -7.589635
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -298,7 +362,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.675808, -8.064983]
+                "coordinates": [
+                    35.675808,
+                    -8.064983
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -312,7 +379,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.9757, -7.6635]
+                "coordinates": [
+                    36.9757,
+                    -7.6635
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -326,7 +396,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.1342, -6.8502]
+                "coordinates": [
+                    35.1342,
+                    -6.8502
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -340,7 +413,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.4142, -6.9293]
+                "coordinates": [
+                    35.4142,
+                    -6.9293
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -354,7 +430,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.0833, -7.1272]
+                "coordinates": [
+                    36.0833,
+                    -7.1272
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -368,7 +447,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.5201, -7.3328]
+                "coordinates": [
+                    36.5201,
+                    -7.3328
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -382,7 +464,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [34.916737, -7.732621]
+                "coordinates": [
+                    34.916737,
+                    -7.732621
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -396,7 +481,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.08, -7.13]
+                "coordinates": [
+                    36.08,
+                    -7.13
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -410,7 +498,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.730833, -7.571944]
+                "coordinates": [
+                    36.730833,
+                    -7.571944
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -424,7 +515,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.813333, -6.778333]
+                "coordinates": [
+                    35.813333,
+                    -6.778333
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -438,7 +532,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.9072, -6.8659]
+                "coordinates": [
+                    35.9072,
+                    -6.8659
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -452,7 +549,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.9469, -6.7507]
+                "coordinates": [
+                    35.9469,
+                    -6.7507
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -466,7 +566,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [33.927959, -8.82119]
+                "coordinates": [
+                    33.927959,
+                    -8.82119
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -480,7 +583,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [33.673231, -8.760482]
+                "coordinates": [
+                    33.673231,
+                    -8.760482
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -494,7 +600,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [34.17508, -8.84927]
+                "coordinates": [
+                    34.17508,
+                    -8.84927
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -508,7 +617,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.9482, -7.1116]
+                "coordinates": [
+                    35.9482,
+                    -7.1116
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -522,7 +634,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [38.007558, -7.774619]
+                "coordinates": [
+                    38.007558,
+                    -7.774619
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -536,7 +651,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.721185, -8.180247]
+                "coordinates": [
+                    36.721185,
+                    -8.180247
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -550,7 +668,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [35.628596, -9.035961]
+                "coordinates": [
+                    35.628596,
+                    -9.035961
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -564,7 +685,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.27636, -6.05044]
+                "coordinates": [
+                    36.27636,
+                    -6.05044
+                ]
             },
             "properties": {
                 "basin": "Wami",
@@ -578,7 +702,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.77208, -6.68101]
+                "coordinates": [
+                    36.77208,
+                    -6.68101
+                ]
             },
             "properties": {
                 "basin": "Wami",
@@ -592,7 +719,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.64058, -6.272529]
+                "coordinates": [
+                    37.64058,
+                    -6.272529
+                ]
             },
             "properties": {
                 "basin": "Wami",
@@ -606,7 +736,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [38.09137, -7.33855]
+                "coordinates": [
+                    38.09137,
+                    -7.33855
+                ]
             },
             "properties": {
                 "basin": "Ruvu",
@@ -620,7 +753,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [38.31487, -6.98932]
+                "coordinates": [
+                    38.31487,
+                    -6.98932
+                ]
             },
             "properties": {
                 "basin": "Ruvu",
@@ -634,7 +770,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.81086, -9.42926]
+                "coordinates": [
+                    36.81086,
+                    -9.42926
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -648,7 +787,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.28582, -9.031145]
+                "coordinates": [
+                    37.28582,
+                    -9.031145
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -662,7 +804,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.12517, -9.61552]
+                "coordinates": [
+                    37.12517,
+                    -9.61552
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -676,7 +821,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.75609, -8.01618]
+                "coordinates": [
+                    37.75609,
+                    -8.01618
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -690,7 +838,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [34.97054, -6.62022]
+                "coordinates": [
+                    34.97054,
+                    -6.62022
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -704,7 +855,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [36.41091, -7.32455]
+                "coordinates": [
+                    36.41091,
+                    -7.32455
+                ]
             },
             "properties": {
                 "basin": "Rufiji",
@@ -718,7 +872,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.55939, -7.88927]
+                "coordinates": [
+                    37.55939,
+                    -7.88927
+                ]
             },
             "properties": {
                 "basin": "Rufiji",

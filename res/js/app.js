@@ -1,5 +1,5 @@
 var points_url = "res/data/stations.geojson";
-var ip_address = "http://127.0.0.1:5000/";
+var ip_address = "http://52.55.100.18:5000/";
 var raster_url = "";
 var data_all_url = ip_address + "stations";
 var data_single_vic_url = ip_address + "stationvic/";
@@ -8,63 +8,63 @@ var data_single_fdc_res_url = ip_address + "stationfdcresource/";
 
 var map, featureList, stationSearch = [];
 
-$(window).resize(function() {
+$(window).resize(function () {
     sizeLayerControl();
 });
 
-$(document).on("click", ".feature-row", function(e) {
+$(document).on("click", ".feature-row", function (e) {
     $(document).off("mouseout", ".feature-row", clearHighlight);
     sidebarClick(parseInt($(this).attr("id"), 10));
 });
 
 if (!("ontouchstart" in window)) {
-    $(document).on("mouseover", ".feature-row", function(e) {
+    $(document).on("mouseover", ".feature-row", function (e) {
         highlight.clearLayers().addLayer(L.circleMarker([$(this).attr("lat"), $(this).attr("lng")], highlightStyle));
     });
 }
 
 $(document).on("mouseout", ".feature-row", clearHighlight);
 
-$("#about-btn").click(function() {
+$("#about-btn").click(function () {
     $("#aboutModal").modal("show");
     $(".navbar-collapse.in").collapse("hide");
     return false;
 });
 
-$("#full-extent-btn").click(function() {
+$("#full-extent-btn").click(function () {
     map.fitBounds(boroughs.getBounds());
     $(".navbar-collapse.in").collapse("hide");
     return false;
 });
 
-$("#legend-btn").click(function() {
+$("#legend-btn").click(function () {
     $("#legendModal").modal("show");
     $(".navbar-collapse.in").collapse("hide");
     return false;
 });
 
-$("#login-btn").click(function() {
+$("#login-btn").click(function () {
     $("#loginModal").modal("show");
     $(".navbar-collapse.in").collapse("hide");
     return false;
 });
 
-$("#list-btn").click(function() {
+$("#list-btn").click(function () {
     animateSidebar();
     return false;
 });
 
-$("#nav-btn").click(function() {
+$("#nav-btn").click(function () {
     $(".navbar-collapse").collapse("toggle");
     return false;
 });
 
-$("#sidebar-toggle-btn").click(function() {
+$("#sidebar-toggle-btn").click(function () {
     animateSidebar();
     return false;
 });
 
-$("#sidebar-hide-btn").click(function() {
+$("#sidebar-hide-btn").click(function () {
     animateSidebar();
     return false;
 });
@@ -72,7 +72,7 @@ $("#sidebar-hide-btn").click(function() {
 function animateSidebar() {
     $("#sidebar").animate({
         width: "toggle"
-    }, 350, function() {
+    }, 350, function () {
         map.invalidateSize();
     });
 }
@@ -100,7 +100,7 @@ function syncSidebar() {
     /* Empty sidebar features */
     $("#feature-list tbody").empty();
     /* Loop through stations layer and add only features which are in the map bounds */
-    stations.eachLayer(function(layer) {
+    stations.eachLayer(function (layer) {
         if (map.hasLayer(stationLayer)) {
             if (map.getBounds().contains(layer.getLatLng())) {
                 $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="res/img/station.png"></td><td class="feature-name">' + layer.feature.properties.station_country + " : " + layer.feature.properties.station_name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
@@ -162,7 +162,7 @@ var markerClusters = new L.MarkerClusterGroup({
 /* Empty layer placeholder to add to layer control for listening when to add/remove stations to markerClusters layer */
 var stationLayer = L.geoJson(null);
 var stations = L.geoJson(null, {
-    pointToLayer: function(feature, latlng) {
+    pointToLayer: function (feature, latlng) {
         return L.marker(latlng, {
             icon: L.icon({
                 iconUrl: "res/img/station.png",
@@ -174,7 +174,7 @@ var stations = L.geoJson(null, {
             riseOnHover: true
         });
     },
-    onEachFeature: function(feature, layer) {
+    onEachFeature: function (feature, layer) {
 
         if (feature.properties) {
 
@@ -209,18 +209,18 @@ var stations = L.geoJson(null, {
             );
 
             layer.on({
-                click: function(e) {
+                click: function (e) {
 
                     get_station_data(
                         data_single_vic_url + feature.properties.station_name,
                         data_single_fdc_url + feature.properties.station_name,
                         data_single_fdc_res_url + feature.properties.station_name, [
-                            feature.properties.station_name,
-                            feature.properties.station_country,
-                            feature.properties.river,
-                            feature.properties.basin,
-                            feature.properties.area_km2
-                        ]
+                        feature.properties.station_name,
+                        feature.properties.station_country,
+                        feature.properties.river,
+                        feature.properties.basin,
+                        feature.properties.area_km2
+                    ]
                     );
 
                     highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
@@ -239,7 +239,7 @@ var stations = L.geoJson(null, {
         }
     }
 });
-$.getJSON(points_url, function(data) {
+$.getJSON(points_url, function (data) {
     stations.addData(data);
     map.addLayer(stationLayer);
 });
@@ -252,49 +252,50 @@ var ruvuLayer = L.geoJson(null);
 var riverLayer = L.geoJson(null);
 var roi_tzLayer = L.geoJson(null);
 
-var roi_tz = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
-    layers: 'smft:tza_admbnda_adm0_20181019',
-    format: 'image/png',
-    transparent: true,
-    version: '1.1.1',
-    attribution: "Tanzania Administrative Unit",
-    styles: 'countries_style',
-});
+var roi_tz = L.tileLayer.wms("https://data.rcmrd.org/geoserver/smft/wms"
+    , {
+        layers: 'smft:tanzania_country',
+        format: 'image/png',
+        transparent: true,
+        version: '1.1.1',
+        attribution: "Tanzania Administrative Unit",
+        styles: 'countries',
+    });
 
-var riverWays = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+var riverWays = L.tileLayer.wms("https://data.rcmrd.org/geoserver/smft/wms", {
     layers: 'smft:Rivers_Tanzania',
     format: 'image/png',
     transparent: true,
     version: '1.1.1',
     attribution: "Tanzania Rivers",
-    styles: 'rivers_style',
+    styles: 'rivers',
 });
 
-var rufijiBasin = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+var rufijiBasin = L.tileLayer.wms("https://data.rcmrd.org/geoserver/smft/wms", {
     layers: 'smft:Rufiji_River_Basin_Tanzania',
     format: 'image/png',
     transparent: true,
     version: '1.1.1',
     attribution: "Rufiji Basin",
-    styles: 'basin_style',
+    styles: 'basins',
 });
 
-var wamiBasin = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+var wamiBasin = L.tileLayer.wms("https://data.rcmrd.org/geoserver/smft/wms", {
     layers: 'smft:Wami_River_Basin_Tanzania',
     format: 'image/png',
     transparent: true,
     version: '1.1.1',
     attribution: "Wami Basin",
-    styles: 'basin_style',
+    styles: 'basins',
 });
 
-var ruvuBasin = L.tileLayer.wms("http://maps.rcmrd.org:8080/geoserver/smft/wms", {
+var ruvuBasin = L.tileLayer.wms("https://data.rcmrd.org/geoserver/smft/wms", {
     layers: 'smft:Ruvu_River_Basin_Tanzania',
     format: 'image/png',
     transparent: true,
     version: '1.1.1',
     attribution: "Ruvu Basin",
-    styles: 'basin_style',
+    styles: 'basins',
 });
 
 //////////////////////////////////////////////////////////////////////
@@ -356,7 +357,7 @@ function removeThematicLayers(e) {
 }
 
 /* Layer control listeners that allow for a single markerClusters layer */
-map.on("overlayadd", function(e) {
+map.on("overlayadd", function (e) {
     if (e.layer === stationLayer) {
         markerClusters.addLayer(stations);
         syncSidebar();
@@ -364,10 +365,10 @@ map.on("overlayadd", function(e) {
 
     var isThematic =
         (e.layer === rufijiLayer) ? true :
-        (e.layer === wamiLayer) ? true :
-        (e.layer === ruvuLayer) ? true :
-        (e.layer === riverLayer) ? true :
-        false;
+            (e.layer === wamiLayer) ? true :
+                (e.layer === ruvuLayer) ? true :
+                    (e.layer === riverLayer) ? true :
+                        false;
 
 
     if (
@@ -375,9 +376,7 @@ map.on("overlayadd", function(e) {
         e.layer === wamiLayer ||
         e.layer === riverLayer ||
         e.layer === ruvuLayer
-    )
-
-    {
+    ) {
         addThematicLayers(e);
 
     } else if (
@@ -385,15 +384,13 @@ map.on("overlayadd", function(e) {
         e.layer !== wamiLayer &&
         e.layer !== riverLayer &&
         e.layer !== ruvuLayer
-    )
-
-    {
+    ) {
         removeThematicLayers(e);
 
     }
 });
 
-map.on("overlayremove", function(e) {
+map.on("overlayremove", function (e) {
     if (e.layer === stationLayer) {
         markerClusters.removeLayer(stations);
         syncSidebar();
@@ -402,18 +399,18 @@ map.on("overlayremove", function(e) {
 });
 
 /* Filter sidebar feature list to only show features in current map bounds */
-map.on("moveend", function(e) {
+map.on("moveend", function (e) {
     syncSidebar();
 });
 
 /* Clear feature highlight when map is clicked */
-map.on("click", function(e) {
+map.on("click", function (e) {
     highlight.clearLayers();
 });
 
 /* Attribution control */
 function updateAttribution(e) {
-    $.each(map._layers, function(index, layer) {
+    $.each(map._layers, function (index, layer) {
         if (layer.getAttribution) {
             $("#attribution").html((layer.getAttribution()));
         }
@@ -425,7 +422,7 @@ map.on("layerremove", updateAttribution);
 var attributionControl = L.control({
     position: "bottomright"
 });
-attributionControl.onAdd = function(map) {
+attributionControl.onAdd = function (map) {
     var div = L.DomUtil.create("div", "leaflet-control-attribution");
 
     div.innerHTML = "<span class='hidden-xs'>Developed by <a href='https://servirglobal.net/Regions/ESAfrica'>SERVIR E&SA</a>  and <a href='https://rcmrd.org'>RCMRD</a>| </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
@@ -503,24 +500,24 @@ var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
 }).addTo(map);
 
 /* Highlight search box text on click */
-$("#searchbox").click(function() {
+$("#searchbox").click(function () {
     $(this).select();
 });
 
 /* Prevent hitting enter from refreshing the page */
-$("#searchbox").keypress(function(e) {
+$("#searchbox").keypress(function (e) {
     if (e.which == 13) {
         e.preventDefault();
     }
 });
 
-$("#featureModal").on("hidden.bs.modal", function(e) {
+$("#featureModal").on("hidden.bs.modal", function (e) {
     $(document).on("mouseout", ".feature-row", clearHighlight);
 });
 
 
 /* Typeahead search functionality */
-$(document).one("ajaxStop", function() {
+$(document).one("ajaxStop", function () {
     $("#loading").hide();
     sizeLayerControl();
     /* Fit map to stations bounds */
@@ -530,7 +527,7 @@ $(document).one("ajaxStop", function() {
 
     var stationsBH = new Bloodhound({
         name: "Stations",
-        datumTokenizer: function(d) {
+        datumTokenizer: function (d) {
             return Bloodhound.tokenizers.whitespace(d.name);
         },
         queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -540,14 +537,14 @@ $(document).one("ajaxStop", function() {
 
     var geonamesBH = new Bloodhound({
         name: "GeoNames",
-        datumTokenizer: function(d) {
+        datumTokenizer: function (d) {
             return Bloodhound.tokenizers.whitespace(d.name);
         },
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         remote: {
             url: "http://api.geonames.org/searchJSON?username=bootleaf&featureClass=P&maxRows=5&countryCode=US&name_startsWith=%QUERY",
-            filter: function(data) {
-                return $.map(data.geonames, function(result) {
+            filter: function (data) {
+                return $.map(data.geonames, function (result) {
                     return {
                         name: result.name + ", " + result.adminCode1,
                         lat: result.lat,
@@ -557,11 +554,11 @@ $(document).one("ajaxStop", function() {
                 });
             },
             ajax: {
-                beforeSend: function(jqXhr, settings) {
+                beforeSend: function (jqXhr, settings) {
                     settings.url += "&east=" + map.getBounds().getEast() + "&west=" + map.getBounds().getWest() + "&north=" + map.getBounds().getNorth() + "&south=" + map.getBounds().getSouth();
                     $("#searchicon").removeClass("fa-search").addClass("fa-refresh fa-spin");
                 },
-                complete: function(jqXHR, status) {
+                complete: function (jqXHR, status) {
                     $('#searchicon').removeClass("fa-refresh fa-spin").addClass("fa-search");
                 }
             }
@@ -574,10 +571,10 @@ $(document).one("ajaxStop", function() {
 
     /* instantiate the typeahead UI */
     $("#searchbox").typeahead({
-            minLength: 3,
-            highlight: true,
-            hint: false
-        },
+        minLength: 3,
+        highlight: true,
+        hint: false
+    },
         /* {
            name: "Boroughs",
            displayKey: "name",
@@ -595,13 +592,13 @@ $(document).one("ajaxStop", function() {
                 suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
             }
         }, {
-            name: "GeoNames",
-            displayKey: "name",
-            source: geonamesBH.ttAdapter(),
-            templates: {
-                header: "<h4 class='typeahead-header'><img src='res/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
-            }
-        }).on("typeahead:selected", function(obj, datum) {
+        name: "GeoNames",
+        displayKey: "name",
+        source: geonamesBH.ttAdapter(),
+        templates: {
+            header: "<h4 class='typeahead-header'><img src='res/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
+        }
+    }).on("typeahead:selected", function (obj, datum) {
         /* if (datum.source === "Boroughs") {
           map.fitBounds(datum.bounds);
         } */
@@ -620,10 +617,10 @@ $(document).one("ajaxStop", function() {
         if ($(".navbar-collapse").height() > 50) {
             $(".navbar-collapse").collapse("hide");
         }
-    }).on("typeahead:opened", function() {
+    }).on("typeahead:opened", function () {
         $(".navbar-collapse.in").css("max-height", $(document).height() - $(".navbar-header").height());
         $(".navbar-collapse.in").css("height", $(document).height() - $(".navbar-header").height());
-    }).on("typeahead:closed", function() {
+    }).on("typeahead:closed", function () {
         $(".navbar-collapse.in").css("max-height", "");
         $(".navbar-collapse.in").css("height", "");
     });
@@ -659,7 +656,7 @@ function get_station_data(urlvic, urlfdc, urlfdcres, info) {
 
     setModalSTATION(info);
 
-    $.getJSON(urlfdc, function(datafdc) {
+    $.getJSON(urlfdc, function (datafdc) {
 
         console.log("one");
 
@@ -667,25 +664,25 @@ function get_station_data(urlvic, urlfdc, urlfdcres, info) {
             //console.log(datafdc);
             setModalFDC(datafdc["data"]);
         }
-    }).done(function() {
+    }).done(function () {
 
         console.log("two");
 
-        $.getJSON(urlfdcres, function(datafdcres) {
+        $.getJSON(urlfdcres, function (datafdcres) {
             if (datafdcres != null) {
                 //console.log(datafdcres);
                 setModalFDCRES(datafdcres["data"]);
             }
-        }).done(function() {
+        }).done(function () {
 
             console.log("three");
 
-            $.getJSON(urlvic, function(datavic) {
+            $.getJSON(urlvic, function (datavic) {
                 if (datavic != null) {
                     //console.log(datavic);
                     setModalVIC(datavic["data"], info);
                 }
-            }).done(function() {
+            }).done(function () {
                 $('#myModal').modal('show');
             });
 
@@ -697,12 +694,12 @@ function get_station_data(urlvic, urlfdc, urlfdcres, info) {
 }
 
 //gets max val in array
-Array.prototype.max = function() {
+Array.prototype.max = function () {
     return Math.max.apply(null, this);
 };
 
 //gets min val in array
-Array.prototype.min = function() {
+Array.prototype.min = function () {
     return Math.min.apply(null, this);
 };
 
@@ -737,7 +734,7 @@ function setModalSTATION(info_) {
             </tbody>\
             </table>";
 
-    $('#myModal').on('shown.bs.modal', function(e) {
+    $('#myModal').on('shown.bs.modal', function (e) {
 
         //add station data
         const div = document.getElementById("myDiv1");
@@ -751,7 +748,7 @@ function setModalSTATION(info_) {
     });
 
     //station
-    $('#tab1').on('shown.bs.tab', function() {
+    $('#tab1').on('shown.bs.tab', function () {
 
         const div = document.getElementById("myDiv1");
 
@@ -791,7 +788,7 @@ function setModalVIC(data_vic) {
         y: []
     };
 
-    data_vic.forEach(function(val) {
+    data_vic.forEach(function (val) {
         trace1_vic.x.push(val["_data_date"]);
         trace1_vic.y.push(val["_data_value_sim"]);
         trace2_vic.x.push(val["_data_date"]);
@@ -807,24 +804,24 @@ function setModalVIC(data_vic) {
             autorange: true,
             rangeselector: {
                 buttons: [{
-                        count: 1,
-                        label: '1m',
-                        step: 'month',
-                        stepmode: 'backward'
-                    },
-                    {
-                        count: 6,
-                        label: '6m',
-                        step: 'month',
-                        stepmode: 'backward'
-                    },
-                    {
-                        count: 1,
-                        label: '1y',
-                        step: 'year',
-                        stepmode: 'backward'
-                    },
-                    { step: 'all' }
+                    count: 1,
+                    label: '1m',
+                    step: 'month',
+                    stepmode: 'backward'
+                },
+                {
+                    count: 6,
+                    label: '6m',
+                    step: 'month',
+                    stepmode: 'backward'
+                },
+                {
+                    count: 1,
+                    label: '1y',
+                    step: 'year',
+                    stepmode: 'backward'
+                },
+                { step: 'all' }
                 ]
             },
             rangeslider: { autorange: true },
@@ -851,7 +848,7 @@ function setModalVIC(data_vic) {
 
 
 
-    $('#myModal').on('shown.bs.modal', function(e) {
+    $('#myModal').on('shown.bs.modal', function (e) {
 
         const div = document.getElementById("myDiv2");
 
@@ -864,7 +861,7 @@ function setModalVIC(data_vic) {
         Plotly.newPlot('myDiv2', datavic, layout);
 
         // Make plots responsives
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
 
             Plotly.Plots.resize(
                 Plotly.d3.select("div[id='myDiv2']").node()
@@ -874,7 +871,7 @@ function setModalVIC(data_vic) {
     });
 
     //vic
-    $('#tab2').on('shown.bs.tab', function() {
+    $('#tab2').on('shown.bs.tab', function () {
 
         Plotly.Plots.resize(
             Plotly.d3.select("div[id='myDiv2']").node()
@@ -882,7 +879,7 @@ function setModalVIC(data_vic) {
     });
 
     //downloading data
-    $("#btnDwn").click(function() {
+    $("#btnDwn").click(function () {
 
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
@@ -893,7 +890,7 @@ function setModalVIC(data_vic) {
 
         let csvContent = "data:text/csv;charset=utf-8,";
 
-        data_vic.forEach(function(rowObj) {
+        data_vic.forEach(function (rowObj) {
 
             let rowlist = [
                 rowObj["_station_name"],
@@ -983,7 +980,7 @@ function setModalFDCRES(data_fdc_res) {
             </table>\
             </div>";
 
-    $('#myModal').on('shown.bs.modal', function(e) {
+    $('#myModal').on('shown.bs.modal', function (e) {
 
         //add station data
         const div = document.getElementById("myDiv4");
@@ -997,7 +994,7 @@ function setModalFDCRES(data_fdc_res) {
     });
 
     //station fdcres
-    $('#tab4').on('shown.bs.tab', function() {
+    $('#tab4').on('shown.bs.tab', function () {
 
         const div = document.getElementById("myDiv4");
 
@@ -1039,7 +1036,7 @@ function setModalFDC(data_fdc) {
         y: []
     };
 
-    data_fdc.forEach(function(val) {
+    data_fdc.forEach(function (val) {
         trace1_fdc.x.push(val["_prob_exc"]);
         trace1_fdc.y.push(val["_data_value_sim"]);
         trace2_fdc.x.push(val["_prob_exc"]);
@@ -1081,7 +1078,7 @@ function setModalFDC(data_fdc) {
     };
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
-    $('#myModal').on('shown.bs.modal', function(e) {
+    $('#myModal').on('shown.bs.modal', function (e) {
 
         const div = document.getElementById("myDiv3");
 
@@ -1094,7 +1091,7 @@ function setModalFDC(data_fdc) {
         Plotly.newPlot('myDiv3', datafdc, layout);
 
         // Make plots responsives
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
 
             Plotly.Plots.resize(
                 Plotly.d3.select("div[id='myDiv3']").node()
@@ -1103,7 +1100,7 @@ function setModalFDC(data_fdc) {
 
     });
 
-    $('#tab3').on('shown.bs.tab', function() {
+    $('#tab3').on('shown.bs.tab', function () {
         Plotly.Plots.resize(
             Plotly.d3.select("div[id='myDiv3']").node()
         );
